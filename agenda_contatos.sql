@@ -1,0 +1,29 @@
+-- MySQL Workbench Synchronization
+-- Generated: 2015-01-17 14:54
+-- Model: New Model
+-- Version: 1.0
+-- Project: Name of the project
+-- Author: Nilton
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+CREATE SCHEMA IF NOT EXISTS `agenda_contatos` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+
+CREATE TABLE IF NOT EXISTS `agenda_contatos`.`contatos` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(180) NOT NULL,
+  `telefone_principal` VARCHAR(45) NOT NULL,
+  `telefone_secundario` VARCHAR(45) NULL DEFAULT NULL,
+  `data_criacao` DATETIME NOT NULL,
+  `data_atualizacao` DATETIME NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
